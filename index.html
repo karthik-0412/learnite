@@ -156,22 +156,22 @@
     padding: 10px 20px;
     display: inline-block;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
     .Services {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .varaibles {
+    .variables {
         margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .web-devlop, 
-    .Ui-Ux, 
-    .power-bi, 
+    .web-devlop,
+    .Ui-Ux,
+    .power-bi,
     .data-science {
         width: 80%;
         background-color: white;
@@ -179,22 +179,34 @@
         margin-bottom: 25px;
         margin-left: auto;
         margin-right: auto;
+        text-align: center; /* Center align text */
     }
-    .web-devlop .container, 
-    .Ui-Ux .container, 
-    .power-bi .container, 
+    .web-devlop .container,
+    .Ui-Ux .container,
+    .power-bi .container,
     .data-science .container {
-        text-align: center;
         padding: 10px 20px;
     }
-    .web-devlop img, 
-    .Ui-Ux img, 
-    .power-bi img, 
+    .web-devlop img,
+    .Ui-Ux img,
+    .power-bi img,
     .data-science img {
         max-width: 100%;
         max-height: 100%;
     }
+    .web-devlop .container a,
+    .Ui-Ux .container a,
+    .power-bi .container a,
+    .data-science .container a {
+        display: block; /* Change display to block */
+        color: black;
+        text-decoration: none;
+        overflow: hidden; /* Hide overflow text */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    }
 }
+
 .image-container {
             position: relative;
             width: 100%;
@@ -299,7 +311,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="IMG-20240405-WA0011.jpg" alt="Logo" width="170" height="160">
+            <img src="logo.jpg" alt="Logo" width="170" height="160">
             <span>
                 <h1>LEARNITE</h1>
             </span>
@@ -310,16 +322,16 @@
       <!--nav tags-->
       <ul class="nav nav-tabs" style="text-decoration: none;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" style="color: black;" href="#home">Home</a>
+          <a class="nav-link active" aria-current="page" style="color: black;" href="#home"><b>Home</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about" style="color: black;">About Us</a>
+          <a class="nav-link" href="#about" style="color: black;"><b>About Us</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#services" style="color: black;">Course</a>
+          <a class="nav-link" href="#services" style="color: black;"><b>Course</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: black;" href="#contacts">Contact Us</a>
+          <a class="nav-link" style="color: black;" href="#contacts"><b>Contact Us</b></a>
         </li>
       </ul>
       <div class="img-container" id="home">
@@ -348,25 +360,25 @@
             <div class="web-devlop" style="margin-left: 20px;">
                 <img src="hand-drawn-web-developers_23-2148819604.avif" width="200" height="200" alt="image cannot be load" style="display: inline;">
                 <div class="container">
-                <a href="Web-devolper.html" style="display: inline; color: black; text-decoration: none;">WEB DEVELOPMENT</a>
+                <a href="Web-devolper.html" style="display: inline; color: black; text-decoration: none;"><b>WEB DEVELOPMENT</b></a>
                 </div>
             </div>
             <div class="Ui-Ux">
                 <img src="gradient-ui-ux-background_23-2149052117.avif" width="200" height="200" alt="image cannot be load" style="display: inline;">
                 <div class="container">
-                <a href="ui/ux.html" style="display: inline; color: black; text-decoration: none;">UI/UX DESIGN</a>
+                <a href="ui/ux.html" style="display: inline; color: black; text-decoration: none;"><b>UI/UX DESIGN</b></a>
                 </div>
             </div>
             <div class="power-bi">
                 <img src="images.png" width="200" height="200" alt="image cannot be load" style="display: inline;">
                 <div class="container">
-                <a href="power-bi.html" style="display: inline; color: black; text-decoration: none;">POWER-BI</a>
+                <a href="power-bi.html" style="display: inline; color: black; text-decoration: none;"><b>POWER-BI</b></a>
                 </div>
             </div>
             <div class="data-science" style="margin-left: 20px;">
                 <img src="DataScience_shutterstock_1054542323.jpg" width="200" height="200" alt="image cannot be load" style="display: inline;">
                 <div class="container">
-                <a href="data-science.html" style="display: inline; color: black; text-decoration: none;">DTA SCIENCE</a>
+                <a href="data-science.html" style="display: inline; color: black; text-decoration: none;"><b>DATA SCIENCE</b</a>
                 </div>
             </div>
         </div>
