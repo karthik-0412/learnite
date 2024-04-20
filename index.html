@@ -223,6 +223,12 @@
     display: block;
     margin: 0 auto;
     }
+    @media (max-width: 760px) {
+    .certificate-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
 
 </style>
 </head>
@@ -439,8 +445,8 @@
                             <br>
                         </div>
                         <div>
-                            <h2>Example Certificate</h2>
-                            <img src="certifacte.png" width="700" height="400">
+                            <h2 style="text-align: center;">Example Certificate</h2>
+                            <img src="certifacte.png" class="img-fluid" alt="Example Certificate">
                         </div>
                     </div>
                     </div>
@@ -462,42 +468,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    const aboutUsNavLink = document.querySelector('a[href="#about"]');
-    aboutUsNavLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        const boxSection = document.getElementById('about');
-        const offset = 100;
-        const topPos = boxSection.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: topPos, behavior: 'smooth' });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const internshipNavLink = document.querySelector('a[href="#internship"]');
-    if (internshipNavLink) {
-        internshipNavLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            const boxSection = document.getElementById('internship-in');
-            const offset = 100;
-            const topPos = boxSection.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: topPos, behavior: 'smooth' });
+            const smoothScroll = (targetId) => {
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    const offset = 100;
+                    const topPos = targetSection.offsetTop - offset;
+                    window.scrollTo({ top: topPos, behavior: 'smooth' });
+                }
+            };
+    
+            const aboutUsNavLink = document.querySelector('a[href="#about"]');
+            if (aboutUsNavLink) {
+                aboutUsNavLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    smoothScroll('about');
+                });
+            }
+    
+            const internshipNavLink = document.querySelector('a[href="#internship"]');
+            if (internshipNavLink) {
+                internshipNavLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    smoothScroll('internship-in');
+                });
+            }
+    
+            const contactUsNavLink = document.querySelector('a[href="#contact-us"]');
+            if (contactUsNavLink) {
+                contactUsNavLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    smoothScroll('contacts');
+                });
+            }
         });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const contactUsNavLink = document.querySelector('a[href="#contact-us"]');
-    if (contactUsNavLink) {
-        contactUsNavLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            const boxSection = document.getElementById('contacts');
-            const offset = 100;
-            const topPos = boxSection.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: topPos, behavior: 'smooth' });
-        });
-    }
-});
-
+    </script>
+    
 
     </script>
 </body>
